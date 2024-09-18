@@ -90,7 +90,7 @@ function displayResult() {
 function animateHands() {
   const player1 = document.getElementById("player1");
   const player2 = document.getElementById("player2");
-  // -- AI -- //
+  //
 
   player1.classList.remove("shake");
   player2.classList.remove("shake");
@@ -98,12 +98,14 @@ function animateHands() {
   player1.classList.add("shake");
   player2.classList.add("shake");
 
+  // -- AI -- //
   player1.addEventListener("animationend", () => {
     player1.classList.remove("shake");
     player1.classList.remove("rock", "paper", "scissors");
     player1.classList.add(userGuess);
     displayResult();
   });
+  //
 
   player2.addEventListener("animationend", () => {
     player2.classList.remove("shake");
