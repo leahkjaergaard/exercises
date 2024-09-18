@@ -87,9 +87,7 @@ function displayResult() {
   }
 }
 
-function animateHands() {
-  const player1 = document.getElementById("player1");
-  const player2 = document.getElementById("player2");
+
 
   player1.classList.remove("shake");
   player2.classList.remove("shake");
