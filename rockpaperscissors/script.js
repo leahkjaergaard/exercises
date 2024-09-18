@@ -97,13 +97,6 @@ function animateHands() {
   player1.classList.add("shake");
   player2.classList.add("shake");
 
-  player1.addEventListener("animationend", () => {
-    player1.classList.remove("shake");
-    player1.classList.remove("rock", "paper", "scissors");
-    player1.classList.add(userGuess);
-    displayResult();
-  });
-
   player2.addEventListener("animationend", () => {
     player2.classList.remove("shake");
     player2.classList.remove("rock", "paper", "scissors");
