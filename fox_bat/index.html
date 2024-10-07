@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox bat</title>
+
+    <style>
+        [data-filter"bat"] {
+            background-color: black;
+            color: brown;
+        }
+
+        [data-filter"fox"] {}
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", init)
+        function init() {
+            document.querySelector("button").addEventListener("click", change)
+        }
+        function change() {
+
+            document.querySelector("h1").dataset.filter = "bat"
+        }
+    </script>
+</head>
+
+<body>
+    <h1 data-filter="fox"> Hey, brown is fow black is bat</h1>
+
+</body>
+
+</html>
