@@ -1,8 +1,8 @@
 :root {
-  --header-bg-col-hawaii: #a078dc;
+  --header-bg-col-purple: #a078dc;
   --header-bg-col-dark: #121212;
   --header-bg-col-light: #ffffff;
-  --text-color-hawaii: #ffffff;
+  --text-color-purple: #ffffff;
   --text-color-dark: #f7f7f7;
   --text-color-light: #000000;
 }
@@ -16,14 +16,14 @@ main {
   flex-direction: column;
 }
 
-body[data-theme="hawaii"] {
-  --header-bg-col: var(--header-bg-col-hawaii);
-  --text-color: var(--text-color-hawaii);
+body[data-theme="purple"] {
+  --header-bg-col: var(--header-bg-col-purple);
+  --text-color: var(--text-color-purple);
   background-color: #ccc0de;
 }
-body[data-theme="hawaii"] h1,
-body[data-theme="hawaii"] p {
-  color: var(--header-bg-col-hawaii);
+body[data-theme="purple"] h1,
+body[data-theme="purple"] p {
+  color: var(--header-bg-col-purple);
 }
 
 body[data-theme="dark"] {
@@ -72,10 +72,6 @@ select {
   background-color: var(--header-bg-col);
   color: var(--text-color);
   transition: all 0.3s ease;
-}
-select:focus {
-  outline: none;
-  border-color: #007bff;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
