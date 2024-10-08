@@ -2,7 +2,7 @@ document.getElementById("theme-selector").addEventListener("change", function ()
   var theme = this.value;
   var purpleElement = document.getElementById("purple");
 
-  // Skift styling af "purple" elementet baseret på tema
+  // Skift elementet baseret på tema
   if (purpleElement) {
     var styles = {
       light: { backgroundColor: "lightgray", color: "black" },
@@ -12,6 +12,5 @@ document.getElementById("theme-selector").addEventListener("change", function ()
     Object.assign(purpleElement.style, styles[theme]);
   }
 
-  // Ændr temaet for body elementet
   document.body.setAttribute("data-theme", theme);
 });
