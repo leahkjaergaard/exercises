@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointer Move</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            --lightness: 50%;
+            --saturation: 50%;
+            background-color: hsl(120, var(--saturation), var(--lightness));
+            transition: background-color 0.1s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('mousemove', function (event) {
+            // X-position
+            let xPos = event.clientX;
+            let yPos = event.clientY;
+
+            // Beregner musens position 
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            let xPercent = (xPos / width) * 100;
+            let yPercent = (yPos / height) * 100;
+
+            // Opdaterer CSS variabler
+            document.body.style.setProperty('--lightness', `${xPercent}%`);
+            document.body.style.setProperty('--saturation', `${yPercent}%`);
+        });
+    </script>
+</body>
+
+</html>
